@@ -1,7 +1,3 @@
-client.on('ready', () => {
-     client.user.setActivity("Netflix and bitch",{type: 'WATCHING'});
-
-});
 const Discord = require('discord.js');
 
 const Util = require('discord.js');
@@ -29,6 +25,7 @@ const prefix = "!";
 ////////////////////////
 
 client.on('message', async msg =>{
+	client.user.setActivity("Netflix and bitch",{type: 'WATCHING'});
 	if (msg.author.bot) return undefined;
     if (!msg.content.startsWith(prefix)) return undefined;
     
