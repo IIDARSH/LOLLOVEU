@@ -1,3 +1,7 @@
+client.on('ready', () => {
+     client.user.setActivity("Netflix and bitch",{type: 'WATCHING'});
+
+});
 const Discord = require('discord.js');
 
 const Util = require('discord.js');
