@@ -20,7 +20,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "$";
+const prefix = "!";
 /////////////////////////
 ////////////////////////
 
@@ -315,17 +315,17 @@ function play(guild, song) {
 client.on('message', message => {
     if (message.content === 'help') {
         let helpEmbed = new Discord.RichEmbed()
-        .setTitle('**Muisc commands...**')
-        .setDescription('**Prefix ($)**')
-        .addField('play', 'to play song')
-        .addField('join', 'to spawn bot')
-        .addField('disconnect', 'to leave bot ')
-        .addField('skip', 'to skip song')
-        .addField('pause', 'to stop song ')
-        .addField('resume', 'to resume the song )
-        .addField('queue', 'to show queue')
-        .addField('np', 'to see the song playing now')
-        .setFooter('(general_commands) for general commands')
+        .setTitle('**أوامر الميوزك...**')
+        .setDescription('**برفكس البوت (!)**')
+        .addField('play', 'لتشغيل اغنية')
+        .addField('join', 'دخول رومك الصوتي')
+        .addField('disconnect', 'الخروج من رومك الصوتي')
+        .addField('skip', 'تخطي الأغنية')
+        .addField('pause', 'ايقاف الاغنية مؤقتا')
+        .addField('resume', 'تكملة الاغنية')
+        .addField('queue', 'اظهار قائمة التشغيل')
+        .addField('np', 'اظهار الاغنية اللي انت مشغلها حاليا')
+        .setFooter('(general_commands) لاظهار الاوامر العامة')
       message.channel.send(helpEmbed);
     }
 });
@@ -333,12 +333,13 @@ client.on('message', message => {
 client.on('message', message => {
     if (message.content === 'general_commands') {
         let helpEmbed = new Discord.RichEmbed()
-        .setTitle('**General...**')
-        .addField('avatar', "to see avatar someone")
-        .addField('gif', 'for gifs')
-        .addField('ping', 'to know ping bot')
-        .setFooter('The new soon')
+        .setTitle('**أوامر عامة...**')
+        .addField('avatar', "افاتار الشخص المطلوب")
+        .addField('gif', 'البحث عن جيف انت تطلبه')
+        .addField('ping', 'معرفة ping البوت')
+        .setFooter('المزيد قريبا ان شاء الله!')
       message.channel.send(helpEmbed);
     }
 });
 
+client.login(process.env.BOT_TOKEN);
