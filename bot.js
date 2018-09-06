@@ -25,7 +25,7 @@ const prefix = "$";
 ////////////////////////
 
 client.on('ready', () => {
-     client.user.setActivity("Darsh 4 ever",{type: 'WATCHING'});
+     client.user.setActivity("$play",{type: 'WATCHING'});
 
 	
 });
