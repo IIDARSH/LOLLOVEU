@@ -27,6 +27,7 @@ const prefix = "$";
 client.on('ready', () => {
      client.user.setActivity("Darsh 4 ever",{type: 'WATCHING'});
 
+	
 });
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
